@@ -16,10 +16,9 @@ if (isset($_GET['delete'])) {
     exit;
 }
 
-if (isset($_GET['search']) && isset($_GET['field'])) {
+if (isset($_GET['search'])) {
     $search = $_GET['search'];
-    $field = $_GET['field'];
-    $notes = searchNotes($pdo, $search, $field);
+    $notes = searchNotes($pdo, $search);
 } else {
     $notes = getNotes($pdo);
 }

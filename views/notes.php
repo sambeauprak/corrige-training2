@@ -1,9 +1,5 @@
 <form method="get" action="index.php">
     <input type="text" name="search" placeholder="Rechercher...">
-    <label for="field">Titre</label>
-    <input type="radio" name="field" value="title" />
-    <label for="field">Contenu</label>
-    <input type="radio" name="field" value="content" />
     <button type="submit">Rechercher</button>
 </form>
 
