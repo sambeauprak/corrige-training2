@@ -19,7 +19,7 @@ function deleteNote($pdo, $id)
 
 function searchNotes($pdo, $search, $field)
 {
-    $stmt = $pdo->prepare("SELECT * FROM notes WHERE $field LIKE %?% ORDER BY created_at DESC");
+    $stmt = $pdo->prepare("SELECT * FROM notes WHERE $field LIKE ? ORDER BY created_at DESC");
     $stmt->execute(['%' . $search . '%']);
     return $stmt->fetchAll();
 }
